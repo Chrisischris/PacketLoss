@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="center"><p id="title"></p></div>
-  <div id="pane" style="width:null; height:null;"><div id="box" style=""><h2 class="center">&lt;/&gt;</h2></div></div>
+  <div id="pane" style="width:null; height:null;"><div id="box" style="left:null; top:null;"><h2 class="center">&lt;/&gt;</h2></div></div>
   <script>
     //---Set play area based on screen size---
     var screenHeight = document.documentElement.clientHeight - 40 + "px";
@@ -19,6 +19,10 @@
     document.getElementById("pane").style.width = screenWidth;
     document.getElementById("pane").style.height = screenHeight;
     //---End play area---
+    //---Center Box---
+    document.getElementById("box").style.left = (document.documentElement.clientWidth - 200) * .5 + "px";
+    document.getElementById("box").style.top = (document.documentElement.clientHeight - 40) * .5 + "px";
+    //---End Center Box---
     //---Title display when site loads---
     titlefunc();
     function titlefunc() {
