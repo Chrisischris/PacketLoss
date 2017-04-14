@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2000 900" style="enable-background:new 0 0 2000 900;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;fill:#FF0000;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:none;}
+	.st4{fill:#222222;stroke:#222222;stroke-width:20;stroke-miterlimit:10;}
+	.st5{font-family:'Lato-Black';}
+	.st6{font-size:373px;}
+</style>
+<g id="Layer_1" class="st0">
+	<rect x="895" y="403" class="st1" width="211" height="98"/>
+</g>
+<g id="Layer_4" class="st0">
+</g>
+<g id="Layer_2">
+	<path class="st2" d="M1088,495H912c-6.6,0-12-5.4-12-12v-66c0-6.6,5.4-12,12-12h176c6.6,0,12,5.4,12,12v66
+		C1100,489.6,1094.6,495,1088,495z"/>
+	<path class="st2" d="M1909,900H91c-50,0-91-41-91-91V91C0,41,41,0,91,0h1818c50.1,0,91,41,91,91v718C2000,859,1959.1,900,1909,900z
+		"/>
+	<rect x="0.2" y="286" class="st3" width="1999.8" height="915"/>
+	<text transform="matrix(1 0 0 1 123.6445 565.562)" class="st4 st5 st6">&lt;/packet&gt;</text>
+</g>
+</svg>
