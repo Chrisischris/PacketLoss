@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="game.js" type="text/javascript"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dimension</title>
+</head>
+<body>
+  <div class="center"><p id="title"></p></div>
+  <div id="pane" style="width:null; height:null;"><div id="box" style=""><h2 class="center">&lt;/&gt;</h2></div></div>
+  <script>
+    //---Set play area based on screen size---
+    var screenHeight = document.documentElement.clientHeight - 40 + "px";
+    var screenWidth = document.documentElement.clientWidth - 100 + "px";
+    document.getElementById("pane").style.width = screenWidth;
+    document.getElementById("pane").style.height = screenHeight;
+    //---End play area---
+    //---Title display when site loads---
+    titlefunc();
+    function titlefunc() {
+      document.getElementById("title").innerHTML = "D";
+      function t2() {document.getElementById("title").innerHTML = "DI";}
+      function t3() {document.getElementById("title").innerHTML = "DIM";}
+      function t4() {document.getElementById("title").innerHTML = "DIME";}
+      function t5() {document.getElementById("title").innerHTML = "DIMEN";}
+      function t6() {document.getElementById("title").innerHTML = "DIMENS";}
+      function t7() {document.getElementById("title").innerHTML = "DIMENSI";}
+      function t8() {document.getElementById("title").innerHTML = "DIMENSIO";}
+      function t9() {document.getElementById("title").innerHTML = "DIMENSION";}
+      setTimeout(t2, 500);
+      setTimeout(t3, 1000);
+      setTimeout(t4, 1500);
+      setTimeout(t5, 2000);
+      setTimeout(t6, 2500);
+      setTimeout(t7, 3000);
+      setTimeout(t8, 3500);
+      setTimeout(t9, 4000);
+      setTimeout(fadeTitle, 5000);
+      setTimeout(fadeD1, 5500);
+      function fadeTitle(){
+        $("#title").fadeOut();
+      }
+      function fadeD1(){
+        $("#box").fadeIn("slow");
+      }
+      control();
+    }
+    //--- End Title---
+    //---Box Control---
+    function control() {
+    var pane = $('#pane'),
+        box = $('#box'),
+        wh = pane.width() - box.width(),
+        wv = pane.height() - box.height(),
+        d = {},
+        x = 5;
+        function newh(v,a,b) {
+            var n = parseInt(v, 10) - (d[a] ? x : 0) + (d[b] ? x : 0);
+            return n < 0 ? 0 : n > wh ? wh : n;
+        }
+        function newv(v,a,b) {
+            var n = parseInt(v, 10) - (d[a] ? x : 0) + (d[b] ? x : 0);
+            return n < 0 ? 0 : n > wv ? wv : n;
+        }
+        $(window).keydown(function(e) { d[e.which] = true; });
+        $(window).keyup(function(e) { d[e.which] = false; });
+        setInterval(function() {
+            box.css({
+                left: function(i,v) { return newh(v, 65, 68); },
+                top: function(i,v) { return newv(v, 87, 83); }
+            });
+            wh = pane.width() - box.width();
+            wv = pane.height() - box.height();
+        }, 20);
+      }
+      //---End Box Control---
+  </script>
+</body>
+</html>

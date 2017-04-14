@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+body ,html{
+    background-color: rgba(34, 34, 34, 1);
+    height:95vh;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Source Code Pro', monospace;
+    height:100%;
+    width: 100%;
+    color: rgba(34, 34, 34, 1);
+    position: absolute;
+}
+
+p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    color: white;
+}
+
+.center {
+    position: relative;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#box {
+  height:4%;
+  width: 10%;
+  display:none;
+  background-color:rgb(255, 255, 255);
+  position:absolute;
+
+}
+
+#pane {
+  position:relative;
+  border:0px solid red;
+}
