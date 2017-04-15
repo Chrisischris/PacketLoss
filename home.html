@@ -11,7 +11,10 @@
 </head>
 <body>
   <div class="center"><p id="title"></p></div>
-  <div id="pane" style="width:null; height:null;"><img src="images/box.svg" id="box" style="left:null; top:null;"></div>
+  <div id="pane" style="width:null; height:null;">
+    <img src="images/box.svg" id="box" style="left:null; top:null;">
+    <img src="images/enemy.gif" id="enemy" style="left:null; top:null;">
+  </div>
   <!-- <div id="box" style="left:null; top:null;"><h2 class="center">&lt;/&gt;</h2></div> --->
   <script>
     //---Set play area based on screen size---
@@ -27,15 +30,17 @@
     //---Title display when site loads---
     titlefunc();
     function titlefunc() {
-      document.getElementById("title").innerHTML = "D";
-      function t2() {document.getElementById("title").innerHTML = "DI";}
-      function t3() {document.getElementById("title").innerHTML = "DIM";}
-      function t4() {document.getElementById("title").innerHTML = "DIME";}
-      function t5() {document.getElementById("title").innerHTML = "DIMEN";}
-      function t6() {document.getElementById("title").innerHTML = "DIMENS";}
-      function t7() {document.getElementById("title").innerHTML = "DIMENSI";}
-      function t8() {document.getElementById("title").innerHTML = "DIMENSIO";}
-      function t9() {document.getElementById("title").innerHTML = "DIMENSION";}
+      document.getElementById("title").innerHTML = "P";
+      function t2() {document.getElementById("title").innerHTML = "PA";}
+      function t3() {document.getElementById("title").innerHTML = "PAC";}
+      function t4() {document.getElementById("title").innerHTML = "PACK";}
+      function t5() {document.getElementById("title").innerHTML = "PACKE";}
+      function t6() {document.getElementById("title").innerHTML = "PACKET";}
+      function t7() {document.getElementById("title").innerHTML = "PACKET&nbsp";}
+      function t8() {document.getElementById("title").innerHTML = "PACKET L";}
+      function t9() {document.getElementById("title").innerHTML = "PACKET LO";}
+      function t10() {document.getElementById("title").innerHTML = "PACKET LOS";}
+      function t11() {document.getElementById("title").innerHTML = "PACKET LOSS";}
       setTimeout(t2, 500);
       setTimeout(t3, 1000);
       setTimeout(t4, 1500);
@@ -44,8 +49,10 @@
       setTimeout(t7, 3000);
       setTimeout(t8, 3500);
       setTimeout(t9, 4000);
-      setTimeout(fadeTitle, 5000);
-      setTimeout(fadeD1, 5500);
+      setTimeout(t10, 4500);
+      setTimeout(t11, 5000);
+      setTimeout(fadeTitle, 6000);
+      setTimeout(fadeD1, 6500);
       function fadeTitle(){
         $("#title").fadeOut();
       }
