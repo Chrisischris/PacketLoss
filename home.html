@@ -13,10 +13,18 @@
   <div class="center"><p id="title"></p></div>
   <div id="pane" style="width:null; height:null;">
     <img src="images/box.svg" id="box" style="left:null; top:null;">
-    <img src="images/enemy.gif" id="enemy" style="left:null; top:null;">
+    <img src="images/enemy.gif" class="enemy" id="enemy" style="left:0px; top:0px;">
+    <img src="images/enemy.gif" class="enemy" id="enemy" style="left:10px; top:0px;">
   </div>
   <!-- <div id="box" style="left:null; top:null;"><h2 class="center">&lt;/&gt;</h2></div> --->
   <script>
+    //---Moves the enemy randomly---
+    function moveEnemy(){
+      $('.enemy').each(function(){
+        $(this).animate({"top": Math.floor((Math.random() * 100) + 1) + "px"});
+      });
+    }
+    //---End move enemy---
     //---Set play area based on screen size---
     var screenHeight = document.documentElement.clientHeight - 20 + "px";
     var screenWidth = document.documentElement.clientWidth - 20 + "px";
