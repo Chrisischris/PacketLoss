@@ -18,19 +18,26 @@
   </div>
   <!-- <div id="box" style="left:null; top:null;"><h2 class="center">&lt;/&gt;</h2></div> --->
   <script>
+    //---Set play area based on screen size---
+    var screenHeight = document.documentElement.clientHeight - 35;
+    var screenWidth = document.documentElement.clientWidth - 35;
+    var screenHeightPX = document.documentElement.clientHeight - 20 + "px";
+    var screenWidthPX = document.documentElement.clientWidth - 20 + "px";
+    document.getElementById("pane").style.width = screenWidthPX;
+    document.getElementById("pane").style.height = screenHeightPX;
+    //---End play area---
     //---Moves the enemy randomly---
     function moveEnemy(){
       $('.enemy').each(function(){
-        $(this).animate({"top": Math.floor((Math.random() * 100) + 1) + "px"});
+        topAdjust = Math.floor((Math.random() * screenHeight) + 1);
+        leftAdjust = Math.floor((Math.random() * screenWidth) + 1);
+        $(this).animate({"top": topAdjust + "px", "left": leftAdjust + "px"}, {duration: 3000, specialEasing: {top: 'linear', left: 'linear'}});
+        //$(this).animate({"left": leftAdjust + "px"}, {specialEasing: "linear", queue: false });
       });
     }
+    setInterval(moveEnemy, 3000);
     //---End move enemy---
-    //---Set play area based on screen size---
-    var screenHeight = document.documentElement.clientHeight - 20 + "px";
-    var screenWidth = document.documentElement.clientWidth - 20 + "px";
-    document.getElementById("pane").style.width = screenWidth;
-    document.getElementById("pane").style.height = screenHeight;
-    //---End play area---
+
     //---Center Box---
     document.getElementById("box").style.left = (document.documentElement.clientWidth) * .5 + "px";
     document.getElementById("box").style.top = (document.documentElement.clientHeight) * .5 + "px";
@@ -49,18 +56,18 @@
       function t9() {document.getElementById("title").innerHTML = "PACKET LO";}
       function t10() {document.getElementById("title").innerHTML = "PACKET LOS";}
       function t11() {document.getElementById("title").innerHTML = "PACKET LOSS";}
-      setTimeout(t2, 500);
-      setTimeout(t3, 1000);
-      setTimeout(t4, 1500);
-      setTimeout(t5, 2000);
-      setTimeout(t6, 2500);
-      setTimeout(t7, 3000);
-      setTimeout(t8, 3500);
-      setTimeout(t9, 4000);
-      setTimeout(t10, 4500);
-      setTimeout(t11, 5000);
-      setTimeout(fadeTitle, 6000);
-      setTimeout(fadeD1, 6500);
+      setTimeout(t2, 250);
+      setTimeout(t3, 500);
+      setTimeout(t4, 750);
+      setTimeout(t5, 1000);
+      setTimeout(t6, 1250);
+      setTimeout(t7, 1500);
+      setTimeout(t8, 1750);
+      setTimeout(t9, 2000);
+      setTimeout(t10, 2250);
+      setTimeout(t11, 2500);
+      setTimeout(fadeTitle, 3000);
+      setTimeout(fadeD1, 3500);
       function fadeTitle(){
         $("#title").fadeOut();
       }
